@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QLabel
+from PySide6.QtWidgets import QApplication, QLabel
 import sys
 from main_window import MainWindow
 
@@ -9,9 +9,12 @@ if __name__ == "__main__":
 
     window = MainWindow()
 
-    label_teste = QLabel("ola")
+    label_teste = QLabel("asdasdasdsd")
 
-    window.v_layout.addWidget(label_teste)
+    window.add_widget_to_vlayout(label_teste)
+
+    # Adjusting the final window size
+    window.adjust_fixed_size()
     
     window.show()
     
