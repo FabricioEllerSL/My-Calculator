@@ -1,11 +1,16 @@
 from PySide6.QtWidgets import QApplication, QLabel
+from PySide6.QtGui import QIcon
+
 import sys
 from main_window import MainWindow
 
 
 if __name__ == "__main__":
 
+
     app = QApplication(sys.argv)
+    icon = QIcon("./assets/icon.png")
+    app.setWindowIcon(icon)
 
     window = MainWindow()
 
