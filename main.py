@@ -1,20 +1,18 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QLabel
 import sys
+from main_window import MainWindow
 
 
 if __name__ == "__main__":
 
     app = QApplication(sys.argv)
 
-    v_layout = QVBoxLayout()
-    cw = QWidget()
-    cw.setLayout(v_layout)
+    window = MainWindow()
 
-    label = QLabel("Um texto aleatorio")
-    v_layout.addWidget(label)
+    label_teste = QLabel("ola")
 
-    window = QMainWindow()
-    window.setCentralWidget(cw)
+    window.v_layout.addWidget(label_teste)
+    
     window.show()
     
     app.exec()
