@@ -2,6 +2,12 @@ from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout
 from PySide6.QtGui import QIcon
 import sys
 
+# This part of the code helps the system to identify the icon with the window correctly
+if sys.platform.startswith('win'):
+        import ctypes
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+            u'CompanyName.ProductName.SubProduct.VersionInformation')
+
 class MainWindow(QMainWindow):
 
     def __init__(self, parent: QWidget | None = None, *args, **kwargs):

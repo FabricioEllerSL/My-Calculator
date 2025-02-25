@@ -9,8 +9,6 @@ if __name__ == "__main__":
 
 
     app = QApplication(sys.argv)
-    icon = QIcon("./assets/icon.png")
-    app.setWindowIcon(icon)
 
     window = MainWindow()
 
