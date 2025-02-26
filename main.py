@@ -2,7 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QLabel
 from PySide6.QtGui import QIcon
 
-from display import Display
+from mod_widgets import Display, Info
 from main_window import MainWindow
 
 
@@ -14,6 +14,10 @@ if __name__ == "__main__":
 
     window = MainWindow()
 
+    info = Info("Texto generico...")
+    window.add_widget_to_vlayout(info)
+
+    # Main Display
     display = Display()
     window.add_widget_to_vlayout(display)
 
