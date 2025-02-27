@@ -4,6 +4,7 @@ from PySide6.QtGui import QIcon
 
 from mod_widgets import Display, Info
 from main_window import MainWindow
+from styles import setupTheme
 
 
 
@@ -11,6 +12,7 @@ if __name__ == "__main__":
 
 
     app = QApplication(sys.argv)
+    setupTheme(app)
 
     window = MainWindow()
 
